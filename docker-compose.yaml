@@ -29,6 +29,15 @@ services:
     networks:
       - "monitoring-network"
     deploy: *template-deploy
+  grafana:
+    image: grafana/grafana:7.0.3
+    volumes:
+      - ./data/grafana/data:/var/lib/grafana
+    networks:
+      - "monitoring-network"
+    ports:
+      - "3000:3000"
+    deploy: *template-deploy
 
 networks: 
   monitoring-network:
