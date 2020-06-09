@@ -9,7 +9,7 @@ x-deploy: &template-deploy
     delay: 10s
 services:
   zabbix-server:
-    image: zabbix/zabbix-server-mysql:centos-5.0.1
+    image: zabbix/zabbix-server-mysql:centos-5.0-latest
     env_file: 
       - ./envs/zabbix-server/common.env
     networks:
