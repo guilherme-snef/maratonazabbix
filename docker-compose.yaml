@@ -9,7 +9,7 @@ x-deploy: &template-deploy
     delay: 10s
 services:
   zabbix-server:
-    image: zabbix/zabbix-server-mysql:centos-5.0.2
+    image: zabbix/zabbix-server-mysql:centos-5.0.1
     env_file: 
       - ./envs/zabbix-server/common.env
     networks:
@@ -21,7 +21,7 @@ services:
       - "10051:10051"
     deploy: *template-deploy
   zabbix-frontend:
-    image: zabbix/zabbix-web-nginx-mysql:alpine-5.0.2
+    image: zabbix/zabbix-web-nginx-mysql:alpine-5.0.1
     env_file: 
       - ./envs/zabbix-frontend/common.env
     ports:
