@@ -31,6 +31,8 @@ services:
     deploy: *template-deploy
   grafana:
     image: grafana/grafana:7.0.3
+    environment: 
+      - GF_INSTALL_PLUGINS=alexanderzobnin-zabbix-app
     volumes:
       - ./data/grafana/data:/var/lib/grafana
     networks:
