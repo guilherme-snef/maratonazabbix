@@ -7,6 +7,7 @@ x-deploy: &template-deploy
   update_config:
     parallelism: 1
     delay: 10s
+
 services:
   zabbix-server:
     image: zabbix/zabbix-server-mysql:centos-5.0-latest
